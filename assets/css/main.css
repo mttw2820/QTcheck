@@ -779,16 +779,18 @@ input, select, textarea {
 		display: -ms-flex;
 		display: flex;
 		cursor: default;
-		list-style: none;
-		margin-left: -1rem;
-		padding-left: 0;
+		list-style: none;	
 	}
-		ul.hori li{
+		ul.hori.campus{
+			margin-left: -1rem;
+			margin-bottom: 1rem;
+		}f
+		ul.hori.campus li{
 			display: -moz-inline-flex;
 			display: -webkit-inline-flex;
 			display: -ms-inline-flex;
 			display: inline-flex;
-			padding: 0 0 0 1rem;
+			padding: 0 0 0 2rem;
 			vertical-align: middle;
 			width: calc(100%/3 -0.5em);
 		}
@@ -1341,7 +1343,7 @@ input, select, textarea {
 				-webkit-transition-delay: 0.25s;
 				-ms-transition-delay: 0.25s;
 				transition-delay: 0.25s;
-				padding: 3rem 2rem;
+				padding: 2rem 2rem;
 				max-height: 40rem;
 				overflow: hidden;
 			}
