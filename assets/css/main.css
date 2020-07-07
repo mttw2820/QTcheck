@@ -787,6 +787,7 @@ input, select, textarea {
 		ul.actions li {
 			padding: 0 0 0 1rem;
 			vertical-align: middle;
+			display: inline-flex;
 		}
 
 		ul.actions.special {
@@ -892,6 +893,7 @@ input, select, textarea {
 						}
 
 		}
+		
 
 /* Icons */
 
@@ -919,7 +921,7 @@ input, select, textarea {
 				text-align: center;
 				width: 2.25rem;
 			}
-
+			
 				ul.icons li a:hover {
 					background-color: rgba(255, 255, 255, 0.075);
 				}
