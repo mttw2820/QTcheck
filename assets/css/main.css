@@ -794,6 +794,16 @@ input, select, textarea {
 			vertical-align: middle;
 			width: calc(100%/3 -0.5em);
 		}
+		
+		ul.hori.img-button{
+			margin-left: -1rem;
+			text-align: center;
+		}
+		ul.hori.img-button li img{
+			max-width: calc(100% - 0.5em);
+			width: auto;
+			height: auto;
+		}
 	
 
 /* Actions */
@@ -1024,7 +1034,7 @@ input, select, textarea {
 			}
 
 /* Button */
-
+	
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],

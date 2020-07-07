@@ -26,10 +26,16 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	
-	<!-- variables -->
+	
 	<script>
+	<!-- variables -->
 	var campus = -1;
 	var name = null;
+	
+	<!-- new script functions -->
+	function campus_onclick(){
+		
+	}
 	</script>
 	
 	<body class="is-preload">
@@ -47,17 +53,17 @@
 							<div class="inner">
 								<h1>하 동 방 방</h1>
 
-								<label for="campus"><b>Campus</b></label>
-								<form name="campus">
+								<label for="campus_form"><b>Campus</b></label>
+								<form name="campus_form">
 									<ul class="hori campus"> 
-										<li><a href="#" class="button">동국</a></li>
-										<li><a href="#" class="button">배화</a></li>
-										<li><a href="#" class="button">성균</a></li>
+										<li><a class="button">동국</a></li>
+										<li><a class="button">배화</a></li>
+										<li><a class="button">성균</a></li>
 									</ul>
 									<ul class="hori campus">
-										<li><a href="#" class="button">상명</a></li>
-										<li><a href="#" class="button">숙명</a></li>
-										<li><a href="#" class="button">숭의</a></li>
+										<li><a class="button">상명</a></li>
+										<li><a class="button">숙명</a></li>
+										<li><a class="button">숭의</a></li>
 									</ul>
 								</form>
 								<!-- icon 버튼으로 해보기 -->
@@ -103,15 +109,28 @@
 							</form>
 						</article>
 							
+							
 						<!-- CHAPEL과 SOON은 이미지 버튼 준비 -->
-						
 						<!-- CHAPEL -->
 						
 						<article id="chapel">
 							<h2 class="major">CHAPEL</h2>
 							
+							<form>
+								<ul class="hori img-button"> 
+									<li><img src="images/star_d1.png"></li>
+									<li><img src="images/star_d2.png"></li>
+									<li><img src="images/star_d3.png"></li>
+								<!-- </ul>
+								<ul class="hori img-button"> -->
+									<li><img src="images/star_d4.png"></li>
+									<li><img src="images/star_d5.png"></li>
+									<li><img src="images/star_d6.png"></li>
+								</ul>
+							</form>
 							
 						</article>
+
 
 
 						<!-- SOON -->
@@ -120,6 +139,8 @@
 								
 								
 							</article>
+
+
 
 						<!-- READING -->
 							<article id="reading">
@@ -137,16 +158,10 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="&#127775;" class="primary"/></li>
+										<li><input type="submit" value="&#128213;&#128521;&#128077;&#128153;" class="primary"/></li>
 										<li><input type="reset" value="&#10006;"/></li>
 									</ul>
 								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
 							</article>
 
 						<!-- Elements -->
@@ -411,10 +426,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			
-			<script>
-			function button_campus_click(var c){
-				campus = c;
-			}
-			</script>
+			
 	</body>
 </html>
