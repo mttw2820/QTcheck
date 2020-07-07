@@ -774,23 +774,26 @@ input, select, textarea {
 
 /* Horizontal */
 	ul.hori {
-		display: -moz-inline-flex;
-		display: -webkit-inline-flex;
-		display: -ms-inline-flex;
-		display: inline-flex;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
 		cursor: default;
 		list-style: none;
 		margin-left: -1rem;
 		padding-left: 0;
 	}
 		ul.hori li{
+			display: -moz-inline-flex;
+			display: -webkit-inline-flex;
+			display: -ms-inline-flex;
+			display: inline-flex;
 			padding: 0 0 0 1rem;
 			vertical-align: middle;
 			width: calc(100%/3 -0.5em);
 		}
-		ul.hori li img{
-			overflow: hidden;
-		}
+	
+
 /* Actions */
 
 	ul.actions {
