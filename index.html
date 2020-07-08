@@ -31,6 +31,7 @@
 	<!-- variables -->
 	var campus = null;	// id of chosen campus
 	var name = null;	// name of c
+	var check_index = -1;
 	
 	var campusSymbol = new Map();
 	campusSymbol['동국'] = "&#127819;";
@@ -41,6 +42,7 @@
 	campusSymbol['숭의'] = "&#127803;";
 	
 	<!-- new script functions -->
+	<!-- on campus button clicked -->
 	function campus_onclick(cam){
 		var new_campus = document.getElementById(cam);	// 클릭된 캠퍼스
 		var welcome_space = document.getElementById("welcometxt");
@@ -69,6 +71,26 @@
 				name_block.style.display = "none";
 			}
 		}
+	}
+	<!-- on name input Typed -->
+	function nameTyped(name_id){
+		var typed_name = document.getElementById(name_id);
+		name = typed_name.value;
+		alert(name);
+	}
+	
+	<!-- check missions -->
+	function check_qt(){
+		
+	}
+	function check_chapel(){
+		// 해당 주차가 맞는지 확인
+	}
+	function check_soon(){
+		
+	}
+	function check_reading(){
+		
 	}
 	</script>
 	
@@ -104,7 +126,7 @@
 									<p style='margin-bottom: 0.5rem;'>
 										<strong id="welcometxt" style='display:none;'></strong> 
 									</p>
-									<input type="text" name="name" id="name" style="display:none;" placeholder="NAME" style="text-align:center;"/>
+									<input type="text" name="name" id="name" placeholder="NAME" onchange="nameTyped(this.id)" style='text-align:center; display:none;'/>
 								</div>
 							</div>
 						</div>
@@ -153,12 +175,12 @@
 							
 							<form>
 								<ul class="hori img-button"> 
-									<li><img src="images/star_d1.png"></li>
-									<li><img src="images/star_d2.png"></li>
-									<li><img src="images/star_d3.png"></li>
-									<li><img src="images/star_d4.png"></li>
-									<li><img src="images/star_d5.png"></li>
-									<li><img src="images/star_d6.png"></li>
+									<li><img id="c1" onclick="chapel_get_star(this.id)" src="images/star_d1.png"></li>
+									<li><img id="c2" onclick="chapel_get_star(this.id)" src="images/star_d2.png"></li>
+									<li><img id="c3" onclick="chapel_get_star(this.id)" src="images/star_d3.png"></li>
+									<li><img id="c4" onclick="chapel_get_star(this.id)" src="images/star_d4.png"></li>
+									<li><img id="c5" onclick="chapel_get_star(this.id)" src="images/star_d5.png"></li>
+									<li><img id="c6" onclick="chapel_get_star(this.id)" src="images/star_d6.png"></li>
 								</ul>
 							</form>
 							
@@ -169,8 +191,14 @@
 						<!-- SOON -->
 							<article id="soon">
 								<h2 class="major">순모임</h2>
-								
-								
+								<p> (넣을 내용을 알려주세요.) </p>
+								<section>
+								<ul class="hori">
+									<li class="soon">
+									<a href="#" class="button big" style='font-size:2.0rem;'><b id="soon_btn">&#129311;</b></a>
+									</li>
+								</ul>
+								</section>
 							</article>
 
 
@@ -183,7 +211,7 @@
 									<div class="fields">
 										<div class="field">
 											<label for="title">Title</label>
-											<input type="text" name="title" id="title" />
+											<input type="text" name="title" id="title" placeholder="책 제목" />
 										</div>
 										<div class="field">
 											<label for="review">Review</label>

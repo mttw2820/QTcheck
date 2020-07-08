@@ -781,10 +781,14 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;	
 	}
+		ul.hori li.soon{
+			width: 100%;
+			text-align: center;
+		}
 		ul.hori.campus{
 			margin-left: -1rem;
 			margin-bottom: 1rem;
-		}f
+		}
 		ul.hori.campus li{
 			display: -moz-inline-flex;
 			display: -webkit-inline-flex;
@@ -1068,6 +1072,16 @@ input, select, textarea {
 		white-space: nowrap;
 	}
 
+	.button.big {
+		min-height: 50%;
+		min-width: 100%;
+		width: auto;
+		height: auto;
+		font-size: 8.0 rem;
+		font-weight: 900;
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
