@@ -779,23 +779,26 @@ input, select, textarea {
 		display: -ms-flex;
 		display: flex;
 		cursor: default;
-		list-style: none;	
+		list-style: none;
+		text-align: center;	
 	}
 		ul.hori li.soon{
 			width: 100%;
-			text-align: center;
+			text-align:center;
 		}
 		ul.hori.campus{
 			margin-left: -1rem;
 			margin-bottom: 1rem;
+			text-align: center;
 		}
 		ul.hori.campus li{
 			display: -moz-inline-flex;
 			display: -webkit-inline-flex;
 			display: -ms-inline-flex;
 			display: inline-flex;
-			padding: 0 0 0 2rem;
+			padding: 0 0.5rem 0 0.5rem;
 			vertical-align: middle;
+			text-align: center;
 			width: calc(100%/3 -0.5em);
 		}
 		
@@ -1065,22 +1068,23 @@ input, select, textarea {
 		letter-spacing: 0.2rem;
 		line-height: 2.75rem;
 		outline: 0;
-		padding: 0 1.25rem 0 1.35rem;
+		padding: 0 1.25rem 0 1.25rem;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
 	}
-
+	/* button big */
 	.button.big {
 		min-height: 50%;
-		min-width: 100%;
+		min-width: 90%;
 		width: auto;
 		height: auto;
-		font-size: 8.0 rem;
+		font-size: 5.0rem;
 		font-weight: 900;
 		padding-top: 5rem;
 		padding-bottom: 5rem;
+		text-align: center;
 	}
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
