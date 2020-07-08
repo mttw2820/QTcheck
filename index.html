@@ -16,7 +16,7 @@
 		<meta charset="utf-8" />
 		<meta property="og:title" content="하동방방">
 		<meta property="og:site_name" content="하동방방">
-		<meta property="go:type" content="article">
+		<meta property="og:type" content="article">
 		<meta property="og:description" content="하나님과 동행하는 방구석 방학<br>믿음의 중심! 서울중앙지부!">
 		<meta property="og:image" content="images/cat.jpg">
 		<meta property="og:image:type" content="image/jpeg">
@@ -29,12 +29,46 @@
 	
 	<script>
 	<!-- variables -->
-	var campus = -1;
-	var name = null;
+	var campus = null;	// id of chosen campus
+	var name = null;	// name of c
+	
+	var campusSymbol = new Map();
+	campusSymbol['동국'] = "&#127819;";
+	campusSymbol['배화'] = "&#127800;";
+	campusSymbol['성균'] = "&#128171;";
+	campusSymbol['상명'] = "&#9752;";
+	campusSymbol['숙명'] = "&#10052;";
+	campusSymbol['숭의'] = "&#127803;";
 	
 	<!-- new script functions -->
-	function campus_onclick(){
+	function campus_onclick(cam){
+		var new_campus = document.getElementById(cam);	// 클릭된 캠퍼스
+		var welcome_space = document.getElementById("welcometxt");
+		var name_block = document.getElementById("name");
 		
+		if(campus == null){	// 첫 선택
+			var welcometext = "이름이 뭐에요?";
+			var sym = campusSymbol[cam];
+			welcome_space.innerText = welcometext;
+			new_campus.innerHTML = "&nbsp;" + sym + "&nbsp;";
+			new_campus.className = "button primary";
+			campus = cam;
+			
+			welcome_space.style.display = "block";
+			name_block.style.display = "block";
+			
+		} else {	// 중복 또는 취소
+			if(campus != cam) { // 중복
+				alert("캠퍼스는 하나만 선택해주세요."); 
+			}
+			else { // 취소 - 기존에 선택되었던 캠퍼스 취소
+				campus = null;
+				new_campus.innerText = cam;
+				new_campus.className = "button";
+				welcome_space.style.display = "none";
+				name_block.style.display = "none";
+			}
+		}
 	}
 	</script>
 	
@@ -56,21 +90,22 @@
 								<label for="campus_form"><b>Campus</b></label>
 								<form name="campus_form">
 									<ul class="hori campus"> 
-										<li><a class="button">동국</a></li>
-										<li><a class="button">배화</a></li>
-										<li><a class="button">성균</a></li>
+										<li><a class="button" id="동국" onclick="campus_onclick(this.id);">동국</a></li>
+										<li><a class="button" id="배화" onclick="campus_onclick(this.id);">배화</a></li>
+										<li><a class="button" id="성균" onclick="campus_onclick(this.id);">성균</a></li>
 									</ul>
 									<ul class="hori campus">
-										<li><a class="button">상명</a></li>
-										<li><a class="button">숙명</a></li>
-										<li><a class="button">숭의</a></li>
+										<li><a class="button" id="상명" onclick="campus_onclick(this.id);">상명</a></li>
+										<li><a class="button" id="숙명" onclick="campus_onclick(this.id);">숙명</a></li>
+										<li><a class="button" id="숭의" onclick="campus_onclick(this.id);">숭의</a></li>
 									</ul>
 								</form>
-								<!-- icon 버튼으로 해보기 -->
-								
-								<label for="name"><b>Name</b></label>
-								<input type="text" name="name" id="name" placeholder="NAME" style="text-align:center;"/>
-								
+								<div>
+									<p style='margin-bottom: 0.5rem;'>
+										<strong id="welcometxt" style='display:none;'></strong> 
+									</p>
+									<input type="text" name="name" id="name" style="display:none;" placeholder="NAME" style="text-align:center;"/>
+								</div>
 							</div>
 						</div>
 						<nav>
@@ -121,8 +156,6 @@
 									<li><img src="images/star_d1.png"></li>
 									<li><img src="images/star_d2.png"></li>
 									<li><img src="images/star_d3.png"></li>
-								<!-- </ul>
-								<ul class="hori img-button"> -->
 									<li><img src="images/star_d4.png"></li>
 									<li><img src="images/star_d5.png"></li>
 									<li><img src="images/star_d6.png"></li>
