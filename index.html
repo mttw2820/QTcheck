@@ -30,6 +30,7 @@
 	<script>
 	<!-- variables -->
 	var campus = null;	// id of chosen campus
+	var sid = null;
 	var name = null;	// name of c
 	var check_index = -1;
 	
@@ -46,6 +47,7 @@
 	function campus_onclick(cam){
 		var new_campus = document.getElementById(cam);	// 클릭된 캠퍼스
 		var welcome_space = document.getElementById("welcometxt");
+		var sid_block = document.getElementById("sid");
 		var name_block = document.getElementById("name");
 		
 		if(campus == null){	// 첫 선택
@@ -57,6 +59,7 @@
 			campus = cam;
 			
 			welcome_space.style.display = "block";
+			sid_block.style.display = "block";
 			name_block.style.display = "block";
 			
 		} else {	// 중복 또는 취소
@@ -68,15 +71,19 @@
 				new_campus.innerText = cam;
 				new_campus.className = "button";
 				welcome_space.style.display = "none";
+				sid_block.style.display = "none";
 				name_block.style.display = "none";
 			}
 		}
 	}
-	<!-- on name input Typed -->
+	<!-- on sid, name input Typed -->
+	function sidTyped(s_id){
+		var typed_sid = document.getElementById(s_id);
+		sid = typed_sid.value;
+	}
 	function nameTyped(name_id){
 		var typed_name = document.getElementById(name_id);
 		name = typed_name.value;
-		alert(name);
 	}
 	
 	<!-- check missions -->
@@ -126,6 +133,7 @@
 									<p style='margin-bottom: 0.5rem;'>
 										<strong id="welcometxt" style='display:none;'></strong> 
 									</p>
+									<input type="text" name="sid" id="sid" placeholder="학번 두자리" maxlength = 2 onchange="sidTyped(this.id)" style='text-align:center; display:none;'/>
 									<input type="text" name="name" id="name" placeholder="NAME" onchange="nameTyped(this.id)" style='text-align:center; display:none;'/>
 								</div>
 							</div>
@@ -149,20 +157,21 @@
 						<article id="qtcheck">
 							<h2 class="major">QT</h2>
 							<section>
-							<h4>(넣을 내용을 정해주세요.)</h4>
-								<blockquote>(넣을 내용을 정해주세요.)</blockquote>
+								<h4><strong>이번주</strong> QT <strong>5회 이상</strong> 했으면 버튼을 클릭해주세요.</h4>
 							</section>
 							<form>
 								<div class="fields">
 									<div class="field">
-										<h3>&#127818;오늘의 큐티 한 마디&#127818;</h3>
-										<textarea name="message" id="message" rows="2" placeholder="정말 한마디만!"></textarea>
+										<label for="message">&#127818;이번주 QT 한마디&#127818;</label>
+										<textarea name="message" id="message" rows="1" placeholder="정말 한마디만!"></textarea>
 									</div>
 								</div>
+								<!-- 주차별 button 구현 -->
 								<ul class="actions">
 									<li><input type="submit" value="&#10004;" class="primary" /></li>
 									<li><input type="reset" value="&#10006;" /></li>
 								</ul>
+								<h4 style="float:right">다음주도 오름직한 동산과 함께해요~</h4>
 							</form>
 						</article>
 							
@@ -210,9 +219,22 @@
 								<form id="" method="#" action="#">
 									<div class="fields">
 										<div class="field">
-											<label for="title">Title</label>
-											<input type="text" name="title" id="title" placeholder="책 제목" />
+											<input type="radio" id="book_1" name="book_title">
+											<label for="book_1">순전한 기독교</label>
 										</div>
+										<div class="field">
+											<input type="radio" id="book_2" name="book_title">
+											<label for="book_2">니고데모의 안경</label>
+										</div>
+										<div class="field">
+											<input type="radio" id="book_3" name="book_title">
+											<label for="book_3">기독교의 기본진리</label>
+										</div>
+										<div class="field">
+											<input type="radio" id="book_4" name="book_title">
+											<label for="book_4"><input type="text" name="title" id="title" placeholder="기타 신앙서적" style="height:2rem; font-size:0.7rem"/></label>
+										</div>
+										
 										<div class="field">
 											<label for="review">Review</label>
 											<textarea name="review" id="review" rows="3" placeholder="한줄평 &#128214;&#128172;"></textarea>
