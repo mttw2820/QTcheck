@@ -32,7 +32,7 @@
 	var campus = null;	// id of chosen campus
 	var sid = null;
 	var name = null;	// name of c
-	var check_index = -1;
+	var submit_index = null;
 	
 	var campusSymbol = new Map();
 	campusSymbol['동국'] = "&#127819;";
@@ -47,8 +47,8 @@
 	function campus_onclick(cam){
 		var new_campus = document.getElementById(cam);	// 클릭된 캠퍼스
 		var welcome_space = document.getElementById("welcometxt");
-		var sid_block = document.getElementById("sid");
-		var name_block = document.getElementById("name");
+		var sid_block = document.getElementById("sid_block");
+		var name_block = document.getElementById("name_block");
 		
 		if(campus == null){	// 첫 선택
 			var welcometext = "이름이 뭐에요?";
@@ -73,7 +73,7 @@
 				welcome_space.style.display = "none";
 				sid_block.style.display = "none";
 				name_block.style.display = "none";
-			}
+			}		
 		}
 	}
 	<!-- on sid, name input Typed -->
@@ -81,24 +81,12 @@
 		var typed_sid = document.getElementById(s_id);
 		sid = typed_sid.value;
 	}
+	
 	function nameTyped(name_id){
 		var typed_name = document.getElementById(name_id);
 		name = typed_name.value;
 	}
 	
-	<!-- check missions -->
-	function check_qt(){
-		
-	}
-	function check_chapel(){
-		// 해당 주차가 맞는지 확인
-	}
-	function check_soon(){
-		
-	}
-	function check_reading(){
-		
-	}
 	</script>
 	
 	<body class="is-preload">
@@ -133,8 +121,8 @@
 									<p style='margin-bottom: 0.5rem;'>
 										<strong id="welcometxt" style='display:none;'></strong> 
 									</p>
-									<input type="text" name="sid" id="sid" placeholder="학번 두자리" maxlength = 2 onchange="sidTyped(this.id)" style='text-align:center; display:none;'/>
-									<input type="text" name="name" id="name" placeholder="NAME" onchange="nameTyped(this.id)" style='text-align:center; display:none;'/>
+									<input type="text" name="sid_block" id="sid_block" placeholder="학번 두자리" maxlength = 2 onchange="sidTyped(this.id)" style='text-align:center; display:none;'/>
+									<input type="text" name="name_block" id="name_block" placeholder="NAME" onchange="nameTyped(this.id)" style='text-align:center; display:none;'/>
 								</div>
 							</div>
 						</div>
@@ -163,12 +151,13 @@
 								<div class="fields">
 									<div class="field">
 										<label for="message">&#127818;이번주 QT 한마디&#127818;</label>
-										<textarea name="message" id="message" rows="1" placeholder="정말 한마디만!"></textarea>
+										<textarea name="message" id="qt_message" rows="1" placeholder="정말 한마디만!"></textarea>
 									</div>
 								</div>
 								<!-- 주차별 button 구현 -->
+								
 								<ul class="actions">
-									<li><input type="submit" value="&#10004;" class="primary" /></li>
+									<li><button onclick="qt_submit_onclick();" class="primary" id="submit_qt">&#10004;</button></li>
 									<li><input type="reset" value="&#10006;" /></li>
 								</ul>
 								<h4 style="float:right">다음주도 오름직한 동산과 함께해요~</h4>
@@ -508,6 +497,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript" src="submit.js"></script>
 			
 			
 	</body>
