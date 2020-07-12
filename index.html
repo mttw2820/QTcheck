@@ -28,64 +28,12 @@
 	
 	
 	<script>
+	
 	<!-- variables -->
 	var campus = null;	// id of chosen campus
 	var sid = null;
 	var name = null;	// name of c
-	var submit_index = null;
-	
-	var campusSymbol = new Map();
-	campusSymbol['동국'] = "&#127819;";
-	campusSymbol['배화'] = "&#127800;";
-	campusSymbol['성균'] = "&#128171;";
-	campusSymbol['상명'] = "&#9752;";
-	campusSymbol['숙명'] = "&#10052;";
-	campusSymbol['숭의'] = "&#127803;";
-	
-	<!-- new script functions -->
-	<!-- on campus button clicked -->
-	function campus_onclick(cam){
-		var new_campus = document.getElementById(cam);	// 클릭된 캠퍼스
-		var welcome_space = document.getElementById("welcometxt");
-		var sid_block = document.getElementById("sid_block");
-		var name_block = document.getElementById("name_block");
-		
-		if(campus == null){	// 첫 선택
-			var welcometext = "이름이 뭐에요?";
-			var sym = campusSymbol[cam];
-			welcome_space.innerText = welcometext;
-			new_campus.innerHTML = "&nbsp;" + sym + "&nbsp;";
-			new_campus.className = "button primary";
-			campus = cam;
-			
-			welcome_space.style.display = "block";
-			sid_block.style.display = "block";
-			name_block.style.display = "block";
-			
-		} else {	// 중복 또는 취소
-			if(campus != cam) { // 중복
-				alert("캠퍼스는 하나만 선택해주세요."); 
-			}
-			else { // 취소 - 기존에 선택되었던 캠퍼스 취소
-				campus = null;
-				new_campus.innerText = cam;
-				new_campus.className = "button";
-				welcome_space.style.display = "none";
-				sid_block.style.display = "none";
-				name_block.style.display = "none";
-			}		
-		}
-	}
-	<!-- on sid, name input Typed -->
-	function sidTyped(s_id){
-		var typed_sid = document.getElementById(s_id);
-		sid = typed_sid.value;
-	}
-	
-	function nameTyped(name_id){
-		var typed_name = document.getElementById(name_id);
-		name = typed_name.value;
-	}
+	var qt_week = null;
 	
 	</script>
 	
@@ -137,27 +85,39 @@
 						</nav>
 					</header>
 
-				<!-- Main -->
+					
+					<!-- Main -->
 					<div id="main">
-
+					
+					
 						<!-- QT check -->
-						
+					
 						<article id="qtcheck">
 							<h2 class="major">QT</h2>
 							<section>
 								<h4><strong>이번주</strong> QT <strong>5회 이상</strong> 했으면 버튼을 클릭해주세요.</h4>
 							</section>
 							<form>
+								<ul class="hori campus"> 
+									<li><a class="button" id="1주차" onclick="qtweek_onclick(this.id);">1주차</a></li>
+									<li><a class="button" id="2주차" onclick="qtweek_onclick(this.id);">2주차</a></li>
+									<li><a class="button" id="3주차" onclick="qtweek_onclick(this.id);">3주차</a></li>
+								</ul>
+								<ul class="hori campus">
+									<li><a class="button" id="4주차" onclick="qtweek_onclick(this.id);">4주차</a></li>
+									<li><a class="button" id="5주차" onclick="qtweek_onclick(this.id);">5주차</a></li>
+									<li><a class="button" id="6주차" onclick="qtweek_onclick(this.id);">6주차</a></li>
+								</ul>
+							</form>
+							<form>
 								<div class="fields">
 									<div class="field">
-										<label for="message">&#127818;이번주 QT 한마디&#127818;</label>
-										<textarea name="message" id="qt_message" rows="1" placeholder="정말 한마디만!"></textarea>
+										<label for="qt_message">&#127818;이번주 QT 한마디&#127818;</label>
+										<textarea name="qt_message" id="qt_message" rows="1" placeholder="정말 한마디만!"></textarea>
 									</div>
 								</div>
-								<!-- 주차별 button 구현 -->
-								
 								<ul class="actions">
-									<li><button onclick="qt_submit_onclick();" class="primary" id="submit_qt">&#10004;</button></li>
+									<li><button class="primary" id="submit_qt" onclick="">&#10004;</button></li>
 									<li><input type="reset" value="&#10006;" /></li>
 								</ul>
 								<h4 style="float:right">다음주도 오름직한 동산과 함께해요~</h4>
@@ -172,13 +132,15 @@
 							<h2 class="major">CHAPEL</h2>
 							
 							<form>
-								<ul class="hori img-button"> 
-									<li><img id="c1" onclick="chapel_get_star(this.id)" src="images/star_d1.png"></li>
-									<li><img id="c2" onclick="chapel_get_star(this.id)" src="images/star_d2.png"></li>
-									<li><img id="c3" onclick="chapel_get_star(this.id)" src="images/star_d3.png"></li>
-									<li><img id="c4" onclick="chapel_get_star(this.id)" src="images/star_d4.png"></li>
-									<li><img id="c5" onclick="chapel_get_star(this.id)" src="images/star_d5.png"></li>
-									<li><img id="c6" onclick="chapel_get_star(this.id)" src="images/star_d6.png"></li>
+								<ul class="hori campus"> 
+									<li><a class="button" id="1주차" onclick="qtweek_onclick(this.id);">1주차</a></li>
+									<li><a class="button" id="2주차" onclick="qtweek_onclick(this.id);">2주차</a></li>
+									<li><a class="button" id="3주차" onclick="qtweek_onclick(this.id);">3주차</a></li>
+								</ul>
+								<ul class="hori campus">
+									<li><a class="button" id="4주차" onclick="qtweek_onclick(this.id);">4주차</a></li>
+									<li><a class="button" id="5주차" onclick="qtweek_onclick(this.id);">5주차</a></li>
+									<li><a class="button" id="6주차" onclick="qtweek_onclick(this.id);">6주차</a></li>
 								</ul>
 							</form>
 							
@@ -497,7 +459,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script type="text/javascript" src="submit.js"></script>
+			<script src="assets/js/submit.js"></script>
+			<script src="assets/js/getInfo.js"></script>
+			<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 			
 			
 	</body>
