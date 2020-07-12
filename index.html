@@ -34,7 +34,7 @@
 	var sid = null;
 	var name = null;	// name of c
 	var qt_week = null;
-	
+	var soon_count = null;
 	</script>
 	
 	<body class="is-preload">
@@ -139,13 +139,28 @@
 						<!-- SOON -->
 							<article id="soon">
 								<h2 class="major">순모임</h2>
-								<p> (넣을 내용을 알려주세요.) </p>
+								<p> 몇 번째 방중 순모임이었나요? </p>
 								<section>
-								<ul class="hori">
-									<li class="soon">
-									<a href="#" class="button big"><b id="soon_btn">&#129311;</b></a>
-									</li>
+								<form>
+									<ul class="hori campus"> 
+										<li><a class="button" id="first_soon" onclick="soonbtn_onclick(this.id);" style="font-size: 1.2rem;">&#9757;</a></li>
+										<li><a class="button" id="second_soon" onclick="soonbtn_onclick(this.id);" style="font-size: 1.2rem;">&#9996;</a></li>
+										<li><a class="button" id="third_soon" onclick="soonbtn_onclick(this.id);" style="font-size: 1.2rem;">&#129311;</a></li>
+									</ul>
+								</form>
+								<form>
+								<div class="fields">
+									<div class="field">
+										<label for="soon_message">&#127793; 오늘 순모임 어땠나요? &#127793;</label>
+										<textarea name="qt_message" id="qt_message" rows="2"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><button class="primary" id="submit_qt" onclick="">&#10004;</button></li>
+									<li><input type="reset" value="&#10006;" /></li>
 								</ul>
+								<h4 style="float:right">다음주도 오름직한 동산과 함께해요~</h4>
+							</form>
 								</section>
 							</article>
 

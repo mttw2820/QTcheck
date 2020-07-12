@@ -19,10 +19,11 @@ function campus_onclick(cam){
 		var welcometext = "이름이 뭐에요?";
 		var sym = campusSymbol[cam];
 		welcome_space.innerText = welcometext;
-		new_campus.innerHTML = "&nbsp;" + sym + "&nbsp;";
+		new_campus.innerHTML = "&nbsp;" + sym;
 		new_campus.className = "button primary";
 		campus = cam;
 		
+		new_campus.style.fontSize = "1.2rem";
 		welcome_space.style.display = "block";
 		sid_block.style.display = "block";
 		name_block.style.display = "block";
@@ -34,6 +35,7 @@ function campus_onclick(cam){
 		else { // 취소 - 기존에 선택되었던 캠퍼스 취소
 			campus = null;
 			new_campus.innerText = cam;
+			new_campus.style.fontSize = "1.0rem";
 			new_campus.className = "button";
 			welcome_space.style.display = "none";
 			sid_block.style.display = "none";
@@ -58,8 +60,9 @@ function qtweek_onclick(btn_id){
 	var clicked_week = document.getElementById(btn_id);
 	
 	if(qt_week == null){	// 첫 선택
-		clicked_week.innerHTML = "&nbsp&nbsp" + "&#127775" + "&nbsp;";
+		clicked_week.innerHTML = "&nbsp" + "&#127775" + "&nbsp;";
 		clicked_week.className = "button primary";
+		clicked_week.style.fontSize = "1.2rem";
 		qt_week = btn_id;	
 	} else {	// 중복 또는 취소
 		if(qt_week != btn_id) { // 중복
@@ -69,7 +72,23 @@ function qtweek_onclick(btn_id){
 			qt_week = null;
 			clicked_week.innerText = btn_id;
 			clicked_week.className = "button";
+			clicked_week.style.fontSize = "1.0rem";
 		}		
 	}
 }
 
+function soonbtn_onclick(btn_id){
+	var clicked_btn = document.getElementById(btn_id);
+	
+	if(soon_count == null){
+		clicked_btn.className = "button primary";
+		soon_count = btn_id;
+	} else {
+		if(soon_count != btn_id){
+			alert("한번에 한 횟수만 선택 가능해요.");
+		} else {
+			soon_count = null;
+			clicked_btn.className = "button";
+		}
+	}
+}
