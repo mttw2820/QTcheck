@@ -35,6 +35,7 @@
 	var name = null;	// name of c
 	var qt_week = null;
 	var soon_count = null;
+	var reading_title = null;
 	</script>
 	
 	<body class="is-preload">
@@ -156,7 +157,7 @@
 									</div>
 								</div>
 								<ul class="actions">
-									<li><button class="primary" id="submit_qt" onclick="">&#10004;</button></li>
+									<li><button class="primary" id="submit_soon" onclick="">&#10004;</button></li>
 									<li><input type="reset" value="&#10006;" /></li>
 								</ul>
 								<h4 style="float:right">다음주도 오름직한 동산과 함께해요~</h4>
@@ -173,20 +174,20 @@
 								<form id="" method="#" action="#">
 									<div class="fields">
 										<div class="field">
-											<input type="radio" id="book_1" name="book_title">
+											<input type="radio" id="book_1" name="book_title" value="순전한 기독교">
 											<label for="book_1">순전한 기독교</label>
 										</div>
 										<div class="field">
-											<input type="radio" id="book_2" name="book_title">
+											<input type="radio" id="book_2" name="book_title" value="니고데모의 안경">
 											<label for="book_2">니고데모의 안경</label>
 										</div>
 										<div class="field">
-											<input type="radio" id="book_3" name="book_title">
+											<input type="radio" id="book_3" name="book_title" value="기독교의 기본진리">
 											<label for="book_3">기독교의 기본진리</label>
 										</div>
 										<div class="field">
-											<input type="radio" id="book_4" name="book_title">
-											<label for="book_4"><input type="text" name="title" id="title" placeholder="기타 신앙서적" style="height:2rem; font-size:0.7rem"/></label>
+											<input type="radio" id="book_4" name="book_title" value="etc">
+											<label for="book_4"><input type="text" name="title" id="title" onchange="reading_title_Typed(this.id);" placeholder="기타 신앙서적" style="height:2rem; font-size:0.7rem"/></label>
 										</div>
 										
 										<div class="field">
@@ -195,7 +196,7 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="&#128213;&#128521;&#128077;&#128153;" class="primary"/></li>
+										<li><button class="primary" id="submit_reading" onclick="">&#128213;&#128521;&#128077;&#128153;</button></li>
 										<li><input type="reset" value="&#10006;"/></li>
 									</ul>
 								</form>

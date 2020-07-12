@@ -35,7 +35,7 @@ function campus_onclick(cam){
 		else { // 취소 - 기존에 선택되었던 캠퍼스 취소
 			campus = null;
 			new_campus.innerText = cam;
-			new_campus.style.fontSize = "1.0rem";
+			new_campus.style.fontSize = "0.9rem";
 			new_campus.className = "button";
 			welcome_space.style.display = "none";
 			sid_block.style.display = "none";
@@ -72,7 +72,7 @@ function qtweek_onclick(btn_id){
 			qt_week = null;
 			clicked_week.innerText = btn_id;
 			clicked_week.className = "button";
-			clicked_week.style.fontSize = "1.0rem";
+			clicked_week.style.fontSize = "0.9rem";
 		}		
 	}
 }
@@ -92,3 +92,19 @@ function soonbtn_onclick(btn_id){
 		}
 	}
 }
+
+$(document).ready(function(){
+	$("input[name='book_title']:radio").change(function(){
+		var serviceType = this.value;
+		reading_title = serviceType;
+	});
+})
+
+function reading_title_Typed(etc_title){
+	if(reading_title != "etc"){
+		document.getElementById('book_4').checked = true;
+	}
+	var title = getElementById(etc_title).value;
+	reading_title = etc_title;
+}
+
