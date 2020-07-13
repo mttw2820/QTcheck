@@ -84,8 +84,10 @@
 								<li><a href="#chapel">Chapel</a></li>
 								<li><a href="#soon">순모임</a></li>
 								<li><a href="#reading">독서</a></li>
+								 
 								<li><a href="#congrats">congrats</a></li>
 								<li><a href="#elements">elements</a>
+								 
 							</ul>
 						</nav>
 					</header>
@@ -122,7 +124,7 @@
 									</div>
 								</div>
 								<ul class="actions">
-									<li><button class="primary" id="submit_qt" onclick="">&#10004;</button></li>
+									<li><a class="button primary" id="submit_qt" onclick="send_qt();">&#10004;</a></li>
 									<li><input type="reset" value="&#10006;" /></li>
 								</ul>
 								<h4 style="float:right">다음주도 오름직한 동산과 함께해요~</h4>
@@ -150,6 +152,9 @@
 										<li><a class="button" id="c_week5" onclick="chapelbtn_onclick(this.id);">5주차</a></li>
 										<li><a class="button" id="c_week6" onclick="chapelbtn_onclick(this.id);">6주차</a></li>
 									</ul>
+									<ul class="actions">
+										<li><a class="button primary" id="submit_chapel" onclick="send_chapel();">&#9786;참석했습니다&#9786;</a></li>
+									</ul>
 								</form>
 							</section>
 							
@@ -173,11 +178,11 @@
 								<div class="fields">
 									<div class="field">
 										<label for="soon_message">&#127793; 오늘 순모임 어땠나요? &#127793;</label>
-										<textarea name="qt_message" id="qt_message" rows="2"></textarea>
+										<textarea name="soon_message" id="soon_message" rows="2"></textarea>
 									</div>
 								</div>
 								<ul class="actions">
-									<li><button class="primary" id="submit_soon" onclick="">&#10004;</button></li>
+									<li><a class="button primary" id="submit_soon" onclick="send_soon();">&#10004;</a></li>
 									<li><input type="reset" value="&#10006;" /></li>
 								</ul>
 							</form>
@@ -215,7 +220,7 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><button class="primary" id="submit_reading" onclick="">&#128213;&#128521;&#128077;&#128153;</button></li>
+										<li><button class="primary" id="submit_reading" onclick="send_reading();">&#128213;&#128521;&#128077;&#128153;</button></li>
 										<li><input type="reset" value="&#10006;"/></li>
 									</ul>
 								</form>
@@ -226,7 +231,8 @@
 						
 							<article id="congrats">
 								<div>
-									<img id="congrat" src="" style="text-align:center; width:100%;"/>
+									<h3>저장 완료! 수고했어요&#128536;</h3>
+									<img id="congrat" src="" style="text-align:center; width: calc(100%/1.2);"/>
 								</div>
 								<div>
 									<ul class="actions">
