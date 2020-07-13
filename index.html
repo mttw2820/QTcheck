@@ -34,8 +34,11 @@
 	var sid = null;
 	var name = null;	// name of c
 	var qt_week = null;
+	var chapel_week = null;
 	var soon_count = null;
 	var reading_title = null;
+	var congrat_image = "images/congrats/" + congrat_imgs[Math.floor(Math.random()*10)];
+	document.getElementById('congrat').src = congrat_image;
 	</script>
 	
 	<body class="is-preload">
@@ -81,6 +84,7 @@
 								<li><a href="#chapel">Chapel</a></li>
 								<li><a href="#soon">순모임</a></li>
 								<li><a href="#reading">독서</a></li>
+								<li><a href="#congrats">congrats</a></li>
 								<li><a href="#elements">elements</a>
 							</ul>
 						</nav>
@@ -131,7 +135,23 @@
 						
 						<article id="chapel">
 							<h2 class="major">CHAPEL</h2>
-							
+							<section>
+								<h4>참여한 방중 채플의 주차를 선택해주세요</h4>
+							</section>
+							<section>
+								<form>
+									<ul class="hori chapel-button"> 
+										<li><a class="button" id="c_week1" onclick="chapelbtn_onclick(this.id);">1주차</a></li>
+										<li><a class="button" id="c_week2" onclick="chapelbtn_onclick(this.id);">2주차</a></li>
+										<li><a class="button" id="c_week3" onclick="chapelbtn_onclick(this.id);">3주차</a></li>
+									</ul>
+									<ul class="hori chapel-button"> 
+										<li><a class="button" id="c_week4" onclick="chapelbtn_onclick(this.id);">4주차</a></li>
+										<li><a class="button" id="c_week5" onclick="chapelbtn_onclick(this.id);">5주차</a></li>
+										<li><a class="button" id="c_week6" onclick="chapelbtn_onclick(this.id);">6주차</a></li>
+									</ul>
+								</form>
+							</section>
 							
 						</article>
 
@@ -144,9 +164,9 @@
 								<section>
 								<form>
 									<ul class="hori campus"> 
-										<li><a class="button" id="first_soon" onclick="soonbtn_onclick(this.id);" style="font-size: 1.2rem;">&#9757;</a></li>
-										<li><a class="button" id="second_soon" onclick="soonbtn_onclick(this.id);" style="font-size: 1.2rem;">&#9996;</a></li>
-										<li><a class="button" id="third_soon" onclick="soonbtn_onclick(this.id);" style="font-size: 1.2rem;">&#129311;</a></li>
+										<li><a class="button" id="first_soon" onclick="soonbtn_onclick(this.id);">첫 번째</a></li>
+										<li><a class="button" id="second_soon" onclick="soonbtn_onclick(this.id);">두 번째</a></li>
+										<li><a class="button" id="third_soon" onclick="soonbtn_onclick(this.id);">세 번째</a></li>
 									</ul>
 								</form>
 								<form>
@@ -160,7 +180,6 @@
 									<li><button class="primary" id="submit_soon" onclick="">&#10004;</button></li>
 									<li><input type="reset" value="&#10006;" /></li>
 								</ul>
-								<h4 style="float:right">다음주도 오름직한 동산과 함께해요~</h4>
 							</form>
 								</section>
 							</article>
@@ -202,6 +221,21 @@
 								</form>
 							</article>
 
+
+						<!-- Congrats -->
+						
+							<article id="congrats">
+								<div>
+									<img id="congrat" src="" style="text-align:center; width:100%;"/>
+								</div>
+								<div>
+									<ul class="actions">
+										<li><a class="button primary" href="#">메인 페이지로 돌아가기</a></li>
+									</ul>
+								</div>
+							</article>
+						
+						
 						<!-- Elements -->
 							<article id="elements">
 								<h2 class="major">Elements</h2>

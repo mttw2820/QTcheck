@@ -802,12 +802,15 @@ input, select, textarea {
 			width: calc(100%/3 -0.5em);
 		}
 		
-		ul.hori.img-button{
+		ul.hori.chapel-button{
 			margin-left: -1rem;
+			margin-bottom: 1rem;
 			text-align: center;
+			list-style: none;
 		}
-		ul.hori.img-button li img{
-			max-width: calc(100% - 0.5em);
+		ul.hori.chapel-button li{
+			padding: 0 0.5rem 0 0.5rem;
+			max-width: calc(100%/3 - 0.5em);
 			width: auto;
 			height: auto;
 		}

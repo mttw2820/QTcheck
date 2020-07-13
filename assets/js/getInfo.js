@@ -77,23 +77,66 @@ function qtweek_onclick(btn_id){
 	}
 }
 
+var chapel_text = new Map();
+chapel_text['c_week1'] = "1주차";
+chapel_text['c_week2'] = "2주차";
+chapel_text['c_week3'] = "3주차";
+chapel_text['c_week4'] = "4주차";
+chapel_text['c_week5'] = "5주차";
+chapel_text['c_week6'] = "6주차";
+
+function chapelbtn_onclick(btn_id){
+	var clicked_btn = document.getElementById(btn_id);
+	
+	if(chapel_week == null){
+		clicked_btn.className = "button primary";
+		clicked_btn.style.fontSize = "1.2rem";
+		clicked_btn.innerHTML = "&#127881;";
+		chapel_week = btn_id;
+		
+	} else {
+		if(chapel_week != btn_id){
+			alert("한번에 한 횟수만 선택 가능해요.");
+		} else {
+			chapel_week = null;
+			clicked_btn.className = "button";
+			clicked_btn.style.fontSize = "0.9rem";
+			clicked_btn.innerText = chapel_text[btn_id];
+		}
+	}
+}
+
 function soonbtn_onclick(btn_id){
 	var clicked_btn = document.getElementById(btn_id);
 	
 	if(soon_count == null){
 		clicked_btn.className = "button primary";
+		clicked_btn.style.fontSize = "1.2rem";
 		soon_count = btn_id;
+		
+		
+		if(btn_id == "first_soon") clicked_btn.innerHTML = "&nbsp" + "&#9757;" + "&nbsp";
+		else if(btn_id == "second_soon") clicked_btn.innerHTML = "&nbsp" + "&#9996;" + "&nbsp";
+		else clicked_btn.innerHTML = "&nbsp" + "&#129311;" + "&nbsp";
 	} else {
 		if(soon_count != btn_id){
 			alert("한번에 한 횟수만 선택 가능해요.");
 		} else {
 			soon_count = null;
 			clicked_btn.className = "button";
+			clicked_btn.style.fontSize = "0.9rem";
+			
+			if(btn_id == "first_soon") clicked_btn.innerText = "첫 번째";
+			else if(btn_id == "second_soon") clicked_btn.innerText = "두 번째";
+			else clicked_btn.innerText = "세 번째";
 		}
 	}
 }
 
 $(document).ready(function(){
+	var congrat_image = "images/congrats/" + congrat_imgs[Math.floor(Math.random()*10)];
+	document.getElementById('congrat').src = congrat_image;
+	
 	$("input[name='book_title']:radio").change(function(){
 		var serviceType = this.value;
 		reading_title = serviceType;
@@ -108,3 +151,6 @@ function reading_title_Typed(etc_title){
 	reading_title = etc_title;
 }
 
+// random congrat gif
+var congrat_imgs = ["hadongbangbang.jpg", "congrats.gif", "congrats(1).gif", "congrats(2).gif", "congrats(3).gif", 
+	"congrats(4).gif", "congrats(5).gif", "congrats(6).gif", "congrats(7).gif", "congrats(8).gif"];
