@@ -1,3 +1,18 @@
+/*
+ * HADONGBANGBANG is strictly a static web
+ * but by using ajax, sends data to Google Spreadsheet (like DB),
+ * we can store(?) user's data.
+ * 
+ * 구분하자면 하동방방은 정적웹이다.
+ * 정적웹 호스팅 서비스인 netlify를 통해 배포되어있으며, 사용자 정보를 가져올 수 없기 떄문이다.
+ * 하지만 ajax 통신을 이용하여 사용자 정보를 구글 스프레드시트에 저장/확인할 수 있다.
+ * 동적 웹호스팅을 연결하는 것이 번거롭고, 간단한 웹을 구성하여 값을 저장만 하는 거라면 
+ * DB 연결 대신 시도해볼만 하다.
+ * 사용자 정보 확인과 공유가 DB를 이용했을 때보다 쉽고 비전공자에게 공유하는 경우에는 더 편리했다.
+ * 단점은 이용자의 정보를 가져올 수는 없다는 것!
+ * 
+ */
+
 var jq = document.createElement('script');
 jq.src = "https://code.jquery.com/jquery-3.1.0.min.js";
 document.getElementsByTagName('head')[0].appendChild(jq);
@@ -142,29 +157,3 @@ function send_reading(){
 	});
 }
 
-/*
-function send_data(){
-	alert("func start");
-	$.ajax({
-		url: "https://script.google.com/macros/s/AKfycbzn7wdgjii-t7nNFX2MQUiV_s4hxx6wWFhWyd2u2bs63IubQQA/exec",
-		data: {'sheet': 'Data', 'nickname': 'test_nickname', 'name': 'test_name'},
-		type: "GET",
-		dataType: "JSON",
-		success : function(data){
-			alert('SUCCESS');
-		},
-		error: function(request, status, error){
-			alert("code: " + request.status + "\nmessage: " + request.responseText + "\nerror: " + error);
-		}
-	})
-	.done(function(request){
-		alert("DONE");
-	})
-	.fail(function(request, status, errorThrown){
-		alert("code: " + request.status + "\nmessage: " + request.responseText + "\nerror: " + error);
-	})
-	.always(function(xhr, status){
-		alert("ALWAYS");
-	});
-}
-*/
