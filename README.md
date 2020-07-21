@@ -1,5 +1,6 @@
 # HaDongBangBang
-##### Demo Static Web Page for Seoul Central CCC - Daily QT check    Distributed as HaDongBangBang
+Demo Static Web Page for Seoul Central CCC - Daily QT check
+##### Distributed as HaDongBangBang
 
 You can check this web [HERE](https://dailyqt.netlify.app)
 
