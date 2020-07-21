@@ -1,4 +1,4 @@
 # downloaded css form from HTML5 UP
 * linguist-vendored
-*.css linguist-vendored=false
+*.css linguist-vendored
 
