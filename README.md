@@ -12,8 +12,8 @@ Web Template downloaded from [HTML5 UP](https://html5up.net/)
 
 ## Contents
 * main page
-![mobile_main](./img_/mobile_mainpage.png "mobile_main"){:width="30"}
-![desktop_main](.\img_\desktop_mainpage.png "desktop_main"){:width="50"}
+![mobile_main](.\img_\mobile_mainpage.png){: width="30"}
+![desktop_main](.\img_\desktop_mainpage.png){: width="50"}
 
 * get user data
 ![mobile_user](.\img_\mobile(1).png "moblie(1)")
