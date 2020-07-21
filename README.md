@@ -12,22 +12,22 @@ Web Template downloaded from [HTML5 UP](https://html5up.net/)
 
 ## Contents
 * main page
-![mobile_main](.\img_\mobile_mainpage.png){: width="30"}
-![desktop_main](.\img_\desktop_mainpage.png){: width="50"}
+![mobile_main](QTcheck/img_/mobile_mainpage.png){: width="30"}
+![desktop_main](QTcheck/img_/desktop_mainpage.png){: width="50"}
 
 * get user data
-![mobile_user](.\img_\mobile(1).png "moblie(1)")
-![desktop_user](.\img_\desktop(1).png "desktop(1)")
+![mobile_user](QTcheck/img_/mobile(1).png "moblie(1)")
+![desktop_user](QTcheck/img_/desktop(1).png "desktop(1)")
 
 * other contents
-![mobile_qt](.\img_\mobile(2).png "mobile_qt")
-![desktop_qt](.\img_\desktop(2).png "desktop_qt")
+![mobile_qt](QTcheck/img_/mobile(2).png "mobile_qt")
+![desktop_qt](QTcheck/img_/desktop(2).png "desktop_qt")
 
-![mobile_chapel](.\img_\mobile(3).png "mobile_chapel")
-![desktop_chapel](.\img_\desktop(3).png "desktop_chapel")
+![mobile_chapel](QTcheck/img_/mobile(3).png "mobile_chapel")
+![desktop_chapel](QTcheck/img_/desktop(3).png "desktop_chapel")
 
-![mobile_soon](.\img_\mobile(4).png "mobile_soon")
-![desktop_soon](.\img_\desktop(4).png "desktop_soon")
+![mobile_soon](QTcheck/img_/mobile(4).png "mobile_soon")
+![desktop_soon](QTcheck/img_/desktop(4).png "desktop_soon")
 
-![mobile_reading](.\img_\mobile(5).png "mobile_reading")
-![desktop_reading](.\img_\desktop(5).png "desktop_reading")
+![mobile_reading](QTcheck/img_/mobile(5).png "mobile_reading")
+![desktop_reading](QTcheck/img_/desktop(5).png "desktop_reading")
