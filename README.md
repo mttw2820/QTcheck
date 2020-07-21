@@ -12,22 +12,25 @@ Web Template downloaded from [HTML5 UP](https://html5up.net/)
 
 ## Contents
 * main page
-![mobile_main](QTcheck/img_/mobile_mainpage.png){: width="30"}
-![desktop_main](QTcheck/img_/desktop_mainpage.png){: width="50"}
+
+<img src="/img_/mobile_mainpage.png" width="30%">
+<img src="/img_/desktop_mainpage.png" width="50%">
 
 * get user data
-![mobile_user](QTcheck/img_/mobile(1).png "moblie(1)")
-![desktop_user](QTcheck/img_/desktop(1).png "desktop(1)")
+
+<img src="/img_/mobile(1).png" width="30%">
+<img src="/img_/desktop(1).png" width="50%">
 
 * other contents
-![mobile_qt](QTcheck/img_/mobile(2).png "mobile_qt")
-![desktop_qt](QTcheck/img_/desktop(2).png "desktop_qt")
 
-![mobile_chapel](QTcheck/img_/mobile(3).png "mobile_chapel")
-![desktop_chapel](QTcheck/img_/desktop(3).png "desktop_chapel")
+<img src="/img_/mobile(2).png" width="30%">
+<img src="/img_/desktop(2).png" width="50%">
 
-![mobile_soon](QTcheck/img_/mobile(4).png "mobile_soon")
-![desktop_soon](QTcheck/img_/desktop(4).png "desktop_soon")
+<img src="/img_/mobile(3).png" width="30%">
+<img src="/img_/desktop(3).png" width="50%">
 
-![mobile_reading](QTcheck/img_/mobile(5).png "mobile_reading")
-![desktop_reading](QTcheck/img_/desktop(5).png "desktop_reading")
+<img src="/img_/mobile(4).png" width="30%">
+<img src="/img_/desktop(4).png" width="50%">
+
+<img src="/img_/mobile(5).png" width="30%">
+<img src="/img_/desktop(5).png" width="50%">
