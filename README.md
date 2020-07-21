@@ -13,24 +13,33 @@ Web Template downloaded from [HTML5 UP](https://html5up.net/)
 ## Contents
 * main page
 
-<img src="/img_/mobile_mainpage.png" width="30%">
-<img src="/img_/desktop_mainpage.png" width="50%">
+<p align="center">
+  <img src="/img_/mobile_mainpage.jpg" width="30%">
+  <img src="/img_/desktop_mainpage.png" width="60%">
+</p>
 
 * get user data
 
-<img src="/img_/mobile(1).png" width="30%">
-<img src="/img_/desktop(1).png" width="50%">
+<p align="center">
+  <img src="/img_/mobile(1).jpg" width="30%">
+  <img src="/img_/desktop(1).png" width="60%">
+</p>
 
 * other contents
 
-<img src="/img_/mobile(2).png" width="30%">
-<img src="/img_/desktop(2).png" width="50%">
-
-<img src="/img_/mobile(3).png" width="30%">
-<img src="/img_/desktop(3).png" width="50%">
-
-<img src="/img_/mobile(4).png" width="30%">
-<img src="/img_/desktop(4).png" width="50%">
-
-<img src="/img_/mobile(5).png" width="30%">
-<img src="/img_/desktop(5).png" width="50%">
+<p align="center">
+  <img src="/img_/mobile(2).jpg" width="30%">
+  <img src="/img_/desktop(2).png" width="60%">
+</p>
+<p align="center">
+  <img src="/img_/mobile(3).jpg" width="30%">
+  <img src="/img_/desktop(3).png" width="60%">
+</p>
+<p align="center">
+  <img src="/img_/mobile(4).jpg" width="30%">
+  <img src="/img_/desktop(4).png" width="60%">
+</p>
+<p align="center">
+  <img src="/img_/mobile(5).jpg" width="30%">
+  <img src="/img_/desktop(5).png" width="60%">
+</p>
