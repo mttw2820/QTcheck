@@ -91,14 +91,16 @@
 						</div>
 						<nav>
 							<ul>
+								<li><a href="#summer">여름수련회</a></li>
 								<li><a href="#qtcheck">QT</a></li>
 								<li><a href="#chapel">Chapel</a></li>
 								<li><a href="#soon">순모임</a></li>
 								<li><a href="#reading">독서</a></li>
+								
 								<!-- 
-								<li><a href="#congrats">congrats</a></li>
+								<li><a href="#congrats">congrats</a></li> 
 								<li><a href="#elements">elements</a>
-								  -->
+								 -->
 							</ul>
 						</nav>
 					</header>
@@ -231,6 +233,39 @@
 									</div>
 									<ul class="actions">
 										<li><button class="primary" id="submit_reading" onclick="send_reading();">&#128213;&#128521;&#128077;&#128153;</button></li>
+										<li><input type="reset" value="&#10006;"/></li>
+									</ul>
+								</form>
+							</article>
+						
+						
+						<!-- Summer Session -->	
+						
+							<article id="summer">
+								<h2 class="major">여름수련회</h2>
+								<form id="" method="#" action="#">
+									<div class="fields">
+										<div class="field">
+											<input type="checkbox" id="day1" name="day1">
+											<label for="day1">8월 18일 DAY1</label>
+										</div>
+										<div class="field">
+											<input type="checkbox" id="day2" name="day2">
+											<label for="day2">8월 19일 DAY2</label>
+										</div>
+										<div class="field">
+											<input type="checkbox" id="day3" name="day3">
+											<label for="day3">8월 20일 DAY3</label>
+										</div>
+									</div>
+									<div class="fields">
+										<div class="field">
+											<label for="summer_review">&#127817;여름수련회&#127817;를 돌아보며 한마디 나눔!</label>
+											<textarea name="summer_review" id="summer_review" rows="3" placeholder="감동과 은혜 그 자체--!"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><a class="button primary" id="submit_summer" onclick="send_summer();">&#10004;</a></li>
 										<li><input type="reset" value="&#10006;"/></li>
 									</ul>
 								</form>

@@ -157,3 +157,47 @@ function send_reading(){
 	});
 }
 
+function send_summer(){
+	var day1 = null;
+	var day2 = null;
+	var day3 = null;
+	if(document.getElementById("day1").checked) day1 = "O";
+	if(document.getElementById("day2").checked) day2 = "O";
+	if(document.getElementById("day3").checked) day3 = "O";
+	var summer_review = document.getElementById("summer_review").value;
+	
+	if(checkmaindata() == MAIN_DATA_ERR) {
+		alert("어느 캠퍼스의 누구인가요??\n메인 페이지에서 기본 정보를 채워주세요.");
+		location.href = "index.html";
+		return;
+	}
+	if(summer_review.length == 0){	
+		alert("여름수련회가 어땠는지 나눠줄 수 없나요..?");
+		return;
+	}
+	
+	
+	$.ajax({
+		url: "https://script.google.com/macros/s/AKfycbxQqlcCjAbsVBSgT9jZefoUUi03OJCybGVTjlYql1-E6Zu7fU8/exec",
+		data: {
+			'Campus': campus, 
+			'SID': sid, 
+			'Name': name,
+			'day1': day1,
+			'day2': day2,
+			'day3': day3,
+			'summer_review': summer_review,
+		},
+		type: "GET",
+		dataType: "JSON",
+		success : function(data){
+			location.href = "#congrats";
+		},
+		error: function(request, status, error){
+			alert("잠시 후 다시 시도해주세요!");
+		}
+	});
+	
+	
+}
+

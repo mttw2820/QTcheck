@@ -160,6 +160,8 @@ function reading_title_Typed(etc_title){
 	reading_title = etc_title;
 }
 
+
+
 // random congrats images(.gif)
 var congrat_imgs = ["hadongbangbang.jpg", "congrats.gif", "congrats(1).gif", "congrats(2).gif", "congrats(3).gif", 
 	"congrats(4).gif", "congrats(5).gif", "congrats(6).gif", "congrats(7).gif", "congrats(8).gif"];
