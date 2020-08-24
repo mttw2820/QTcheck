@@ -26,7 +26,7 @@ Using ajax, sends data to Google Spreadsheet.
 
 	function send_qt(){
 		// get datas from html form 
-	  // check data not null
+		// check data not null
 		$.ajax({
 			url: /* google spreadsheet script url */,
 			data: { /* data go to spreadsheet */ },
