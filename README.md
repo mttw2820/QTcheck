@@ -24,6 +24,7 @@ Using ajax, sends data to Google Spreadsheet.
 [on click submit button function](https://github.com/mttw2820/QTcheck/blob/master/assets/js/submit.js) with .ajax send datas to google spreadsheet script
 
 """
+
 function send_qt(){
 	// get datas from html form 
   // check data not null
@@ -40,6 +41,7 @@ function send_qt(){
 		}
 	});
 }
+
 """
 
 * Reference : [구글-스프레드시트-API-사용하기](https://kutar37.tistory.com/entry/%EA%B5%AC%EA%B8%80-%EC%8A%A4%ED%94%84%EB%A0%88%EB%93%9C%EC%8B%9C%ED%8A%B8-API-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0-INSERT)
